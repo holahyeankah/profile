@@ -31,9 +31,9 @@ app.get("/api/get", (req, res)=>{
 
 
 app.post("/api/post", (req, res)=>{
-    const{description, age, status}=req.body;
-    pool.query("INSERT INTO data (description, age, status) VALUES (?,?,?)",
-    [description, age, status], (err, result)=>{
+    const{description}=req.body;
+    pool.query("INSERT INTO data (description) VALUES (?)",
+    [description], (err, result)=>{
         if(err){
             console.log(err);
         }

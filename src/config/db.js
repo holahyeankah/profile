@@ -17,3 +17,4 @@ pool.connect((err)=>{
     }
 })
 module.exports=pool
+// mysql://b5fb74a7e09974:ded0a60c@us-cdbr-east-04.cleardb.com/heroku_89f8ed25a72e611?reconnect=true
