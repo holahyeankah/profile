@@ -41,6 +41,24 @@ app.post("/api/post", (req, res)=>{
     }
     );
 })
+app.delete("/delete/:id", (req, res)=>{
+    const id=req.params.id
+    pool.query("DELETE FROM data WHERE id=?", id, (err, result)=>{
+        if(err){
+            console.log(err)
+        }
+        else{
+            if(result){
+                res.send({
+                    code:200,
+                    message:"Deleted successfully",
+                    success:result
+                })
+            }
+        }
+       
+    })
+})
 
 
 
