@@ -37,7 +37,9 @@ app.post("/api/post", (req, res)=>{
         if(err){
             console.log(err);
         }
-        res.send(result)
+        res.send({
+            message:"Added successfully",
+            result})
     }
     );
 })
