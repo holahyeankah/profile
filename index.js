@@ -21,7 +21,7 @@ app.get("/api/get", (req, res)=>{
         else{
             if(result){
                 res.send({
-                    code:200,
+                    message: "Data gotten successfully",
                     success:result
                 })
             }
@@ -37,9 +37,12 @@ app.post("/api/post", (req, res)=>{
         if(err){
             console.log(err);
         }
+        if(result){
         res.send({
             message:"Added successfully",
-            result})
+            success:result
+        })
+    }
     }
     );
 })
